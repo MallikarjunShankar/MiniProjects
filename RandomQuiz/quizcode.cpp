@@ -53,6 +53,7 @@ int main() {
 
 	Question questions[] = { q1, q2, q3, q4, q5, q6, q7, q8 };
 	int score = 0;
+	int total = sizeof(questions) / sizeof(questions[0]);
 
 	//shuffling the questions to ensure they appear in random order each time
 	shuffle(begin(questions), end(questions), default_random_engine(time(0)));
@@ -71,7 +72,7 @@ int main() {
 	}
 
 	// displaying the final score
-	cout << "Your total score: " << score << " out of 5." << endl;
+	cout << "Your total score: " << score << " out of " << total << "." << endl;
 	cout << "Quiz Over!" << endl;
 	return 0;
 }
